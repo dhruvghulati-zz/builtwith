@@ -1,0 +1,33 @@
+{
+    "name": "test_import_emails",
+    "files": [
+        {
+            "fileName": "out_emails.csv",
+            "fileFormat": "CSV",
+            "dateFormat": "DAY_MONTH_YEAR",
+            "fileImportPage": {
+                "hasHeader": true,
+                "columnMappings": [
+                    {
+                        "ignored": false,
+                        "columnName": "email",
+                        "idColumnType": null,
+                        "propertyName": "email",
+                        "foreignKeyType": null,
+                        "columnObjectTypeId": "0-1",
+                        "associationIdentifierColumn": false
+                    },
+                    {
+                        "ignored": false,
+                        "columnName": "telephone",
+                        "idColumnType": null,
+                        "propertyName": "phone",
+                        "foreignKeyType": null,
+                        "columnObjectTypeId": "0-1",
+                        "associationIdentifierColumn": false
+                    }
+                ]
+            }
+        }
+    ]
+}

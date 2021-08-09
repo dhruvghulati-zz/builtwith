@@ -1,0 +1,25 @@
+{
+  "name": "dhruv-ghulati",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dhruvghulati/builtwith.git"
+  },
+  "author": "simonare@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dhruvghulati/builtwith/issues"
+  },
+  "homepage": "https://github.com/dhruvghulati/builtwith#readme",
+  "dependencies": {
+    "@hubspot/api-client": "^4.1.0",
+    "axios": "^0.21.1",
+    "dateformat": "^4.5.1",
+    "dotenv": "^10.0.0"
+  }
+}

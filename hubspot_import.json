@@ -1,0 +1,231 @@
+{
+	"name": "test_import",
+	"files": [
+		{
+			"fileName": "out.csv",
+			"fileFormat": "CSV",
+			"dateFormat": "DAY_MONTH_YEAR",
+			"fileImportPage": {
+				"hasHeader": true,
+				"columnMappings": [
+					{
+						"ignored": false,
+						"columnName": "website",
+						"idColumnType": "HUBSPOT_ALTERNATE_ID",
+						"propertyName": "domain",
+						"foreignKeyType": null,
+						"columnObjectTypeId": "0-2",
+						"associationIdentifierColumn": false
+					},
+					{
+						"ignored": false,
+						"columnName": "first_indexed",
+						"idColumnType": null,
+						"propertyName": "first_indexed__cloned_",
+						"foreignKeyType": null,
+						"columnObjectTypeId": "0-2",
+						"associationIdentifierColumn": false
+					},
+					{
+						"ignored": false,
+						"columnName": "last_indexed",
+						"idColumnType": null,
+						"propertyName": "last_indexed__cloned_",
+						"foreignKeyType": null,
+						"columnObjectTypeId": "0-2",
+						"associationIdentifierColumn": false
+					},
+					{
+						"ignored": false,
+						"columnName": "first_detected",
+						"idColumnType": null,
+						"propertyName": "first_detected__cloned_",
+						"foreignKeyType": null,
+						"columnObjectTypeId": "0-2",
+						"associationIdentifierColumn": false
+					},
+					{
+						"ignored": false,
+						"columnName": "last_detected",
+						"idColumnType": null,
+						"propertyName": "last_detected",
+						"foreignKeyType": null,
+						"columnObjectTypeId": "0-2",
+						"associationIdentifierColumn": false
+					},
+					{
+						"ignored": false,
+						"columnName": "monthly_spend_avg",
+						"idColumnType": null,
+						"propertyName": "monthly_spend_avg",
+						"foreignKeyType": null,
+						"columnObjectTypeId": "0-2",
+						"associationIdentifierColumn": false
+					},
+					{
+						"ignored": false,
+						"columnName": "page_rank",
+						"idColumnType": null,
+						"propertyName": "page_rank__cloned_",
+						"foreignKeyType": null,
+						"columnObjectTypeId": "0-2",
+						"associationIdentifierColumn": false
+					},
+					{
+						"ignored": false,
+						"columnName": "tranco",
+						"idColumnType": null,
+						"propertyName": "tranco__cloned_",
+						"foreignKeyType": null,
+						"columnObjectTypeId": "0-2",
+						"associationIdentifierColumn": false
+					},
+					{
+						"ignored": false,
+						"columnName": "majestic",
+						"idColumnType": null,
+						"propertyName": "majestic__cloned_",
+						"foreignKeyType": null,
+						"columnObjectTypeId": "0-2",
+						"associationIdentifierColumn": false
+					},
+					{
+						"ignored": false,
+						"columnName": "umbrella",
+						"idColumnType": null,
+						"propertyName": "umbrella",
+						"foreignKeyType": null,
+						"columnObjectTypeId": "0-2",
+						"associationIdentifierColumn": false
+					},
+					{
+						"ignored": false,
+						"columnName": "company_name",
+						"idColumnType": null,
+						"propertyName": "company",
+						"foreignKeyType": null,
+						"columnObjectTypeId": "0-1",
+						"associationIdentifierColumn": false
+					},
+					{
+						"ignored": false,
+						"columnName": "city",
+						"idColumnType": null,
+						"propertyName": "city",
+						"foreignKeyType": null,
+						"columnObjectTypeId": "0-1",
+						"associationIdentifierColumn": false
+					},
+					{
+						"ignored": false,
+						"columnName": "state",
+						"idColumnType": null,
+						"propertyName": "state",
+						"foreignKeyType": null,
+						"columnObjectTypeId": "0-1",
+						"associationIdentifierColumn": false
+					},
+					{
+						"ignored": false,
+						"columnName": "postcode",
+						"idColumnType": null,
+						"propertyName": "zip",
+						"foreignKeyType": null,
+						"columnObjectTypeId": "0-1",
+						"associationIdentifierColumn": false
+					},
+					{
+						"ignored": false,
+						"columnName": "country",
+						"idColumnType": null,
+						"propertyName": "country",
+						"foreignKeyType": null,
+						"columnObjectTypeId": "0-1",
+						"associationIdentifierColumn": false
+					},
+					{
+						"ignored": false,
+						"columnName": "vertical",
+						"idColumnType": null,
+						"propertyName": "vertical",
+						"foreignKeyType": null,
+						"columnObjectTypeId": "0-2",
+						"associationIdentifierColumn": false
+					},
+					{
+						"ignored": false,
+						"columnName": "telephone",
+						"idColumnType": null,
+						"propertyName": "phone",
+						"foreignKeyType": null,
+						"columnObjectTypeId": "0-1",
+						"associationIdentifierColumn": false
+					},
+					{
+						"ignored": false,
+						"columnName": "email",
+						"idColumnType": null,
+						"propertyName": "email",
+						"foreignKeyType": null,
+						"columnObjectTypeId": "0-1",
+						"associationIdentifierColumn": false
+					},
+					{
+						"ignored": false,
+						"columnName": "emails",
+						"idColumnType": null,
+						"propertyName": "emails",
+						"foreignKeyType": null,
+						"columnObjectTypeId": "0-1",
+						"associationIdentifierColumn": false
+					},
+					{
+						"ignored": false,
+						"columnName": "instagram",
+						"idColumnType": null,
+						"propertyName": "instagram",
+						"foreignKeyType": null,
+						"columnObjectTypeId": "0-2",
+						"associationIdentifierColumn": false
+					},
+					{
+						"ignored": false,
+						"columnName": "facebook",
+						"idColumnType": null,
+						"propertyName": "facebook_company_page",
+						"foreignKeyType": null,
+						"columnObjectTypeId": "0-2",
+						"associationIdentifierColumn": false
+					},
+					{
+						"ignored": false,
+						"columnName": "twitter",
+						"idColumnType": null,
+						"propertyName": "twitter_url",
+						"foreignKeyType": null,
+						"columnObjectTypeId": "0-2",
+						"associationIdentifierColumn": false
+					},
+					{
+						"ignored": false,
+						"columnName": "youtube",
+						"idColumnType": null,
+						"propertyName": "youtube",
+						"foreignKeyType": null,
+						"columnObjectTypeId": "0-2",
+						"associationIdentifierColumn": false
+					},
+					{
+						"ignored": false,
+						"columnName": "tech",
+						"idColumnType": null,
+						"propertyName": "builtwith_tech",
+						"foreignKeyType": null,
+						"columnObjectTypeId": "0-2",
+						"associationIdentifierColumn": false
+					}
+				]
+			}
+		}
+	]
+}
