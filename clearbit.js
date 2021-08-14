@@ -9,6 +9,7 @@ const parameters = `KEY=${CLEARBIT_API_KEY}&META=yes&TECH=${CLEARBIT_TECH}`
 const REQUEST_URI = `${CLEARBIT_API_URL}?${parameters}`
 
 const listService = (result, limit, offset) => {
+    //We need to check if this is how clearbit works
     var requestUrl = typeof offset != 'undefined' ? REQUEST_URI + '&OFFSET=' + offset : REQUEST_URI;
 
     if (offset == 'END' || (limit && result.length > limit)) {

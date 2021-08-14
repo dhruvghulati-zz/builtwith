@@ -19,4 +19,4 @@ const crmEmailsImport = (fileStream) => {
 
 // TODO put this in there crmEmailsProspects 
 
-module.exports = { crmImport, crmEmailsImport}
+module.exports = { crmImport, crmEmailsImport }
