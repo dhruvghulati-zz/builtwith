@@ -13,9 +13,32 @@ const crmEmailsImport = (fileStream) => {
     return hubspotClient.crm.imports.coreApi.create(fileStream, JSON.stringify(importRequestEmails));
 }
 
-const createContact = (req) => {
-    return hubspotClient.crm.contacts.
+const createCompanies = (companies) => {
+    const batchInputSimplePublicObjectInput = {
+        inputs: companies.map(t => {
+            return {
+                properties: t
+            }
+        })
+    };
+    console.log(batchInputSimplePublicObjectInput)
+    return hubspotClient.crm.companies.batchApi.create(batchInputSimplePublicObjectInput)
 }
+
+const searchCompaniesNotEnriched = () => {
+    const publicObjectSearchRequest = {
+        filterGroups: [{
+            "filters": [{"propertyName": "contacts_enriched", "operator": "NOT_HAS_PROPERTY" }] }],
+        sorts: ["domain"], properties: ["id", 'domain'], limit: 100, after: 0
+    };
+    return hubspotClient.crm.companies.searchApi.doSearch(publicObjectSearchRequest)
+}
+
+
+
+// const createContact = (req) => {
+//     return hubspotClient.crm.contacts.
+// }
 
 // const batchInputPublicAssociation = { inputs: [{ "from": { "id": "53628" }, "to": { "id": "12726" }, "type": "contact_to_company" }] };
 // const fromObjectType = "fromObjectType";
@@ -36,4 +59,4 @@ const createContact = (req) => {
 
 // TODO put this in there crmEmailsProspects 
 
-module.exports = { crmImport, crmEmailsImport }
+module.exports = { crmImport, crmEmailsImport, createCompanies, searchCompaniesNotEnriched }

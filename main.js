@@ -3,10 +3,11 @@ require('dotenv').config();
 const { listService } = require("./builtWith");
 const { searchPeople, enrichPeople } = require("./apollo");
 const { jsonToCsv } = require("./util");
-const { crmImport, crmEmailsImport } = require("./hubspot")
+const { crmImport, crmEmailsImport, createCompanies, searchCompaniesNotEnriched } = require("./hubspot")
 
 const fs = require('fs');
 const axios = require('axios').default;
+const { create } = require('domain');
 
 const OUT_FILE = process.env.OUT_FILE
 const OUT_FILE_EMAILS = process.env.OUT_EMAILS
@@ -77,18 +78,22 @@ if (false)
 
 console.log("Triggering Apollo contacts search service")
 
+if (false)
 searchPeople("unilever.com", ["Manager", "Director"]).then((res) => {
-    const requestData = res.data.people.map(r => {
-        return {
-            id: r.id,
-            firstName: r.first_name,
-            lastName: r.last_name
-        }
-    }).slice(0, 3);
+    const requestData = res.data.people
+        .filter(r => r.country === 'United States')
+        .map(r => {
+            return {
+                id: r.id,
+                firstName: r.first_name,
+                lastName: r.last_name
+            }
+        }).slice(0, 50);
     console.log(requestData);
+    console.log(requestData.length + " US contacts found")
 
     const requestTaskList = requestData.map(r => enrichPeople(r));
-    
+
     axios.all(requestTaskList).then((arr) => {
         //TODO Need to associate the domain URL to a company ID in Hubspot
         //which should exist after this point since you added it
@@ -100,3 +105,7 @@ searchPeople("unilever.com", ["Manager", "Director"]).then((res) => {
     })
 })
 
+
+
+searchCompaniesNotEnriched().then(r => console.log(JSON.stringify(r.body)))
+.catch(err => console.error(err.response.body))
