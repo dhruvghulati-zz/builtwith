@@ -3,6 +3,8 @@ const axios = require("axios").default;
 const APOLLO_API_URL = process.env.APOLLO_API_URL;
 const APOLLO_API_KEY = process.env.APOLLO_API_KEY;
 
+axios.
+
 const searchPeople = (companyURL, titles) => {
     const data = {
         api_key: APOLLO_API_KEY,
