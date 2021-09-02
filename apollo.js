@@ -3,8 +3,6 @@ const axios = require("axios").default;
 const APOLLO_API_URL = process.env.APOLLO_API_URL;
 const APOLLO_API_KEY = process.env.APOLLO_API_KEY;
 
-axios.
-
 const searchPeople = (companyURL, titles) => {
     const data = {
         api_key: APOLLO_API_KEY,
@@ -15,7 +13,7 @@ const searchPeople = (companyURL, titles) => {
     return axios.post(APOLLO_API_URL + "mixed_people/search", data);
 };
 
-const enrichPeople = (params ) => {
+const enrichPeople = (params) => {
     const data = {
         api_key: APOLLO_API_KEY,
         id: params.id,
