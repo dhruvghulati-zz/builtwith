@@ -6,7 +6,7 @@ const APOLLO_API_KEY = process.env.APOLLO_API_KEY;
 const searchPeople = (companyURL, titles) => {
     const data = {
         api_key: APOLLO_API_KEY,
-        q_organization_domains: "apollo.io\n" + companyURL,
+        q_organization_domains: companyURL,
         page: 1,
         person_titles: titles
     };

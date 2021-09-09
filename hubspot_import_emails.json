@@ -1,5 +1,5 @@
 {
-    "name": "test_import_emails",
+    "name": "import_emails",
     "files": [
         {
             "fileName": "out_emails.csv",
@@ -22,6 +22,33 @@
                         "columnName": "telephone",
                         "idColumnType": null,
                         "propertyName": "phone",
+                        "foreignKeyType": null,
+                        "columnObjectTypeId": "0-1",
+                        "associationIdentifierColumn": false
+                    },
+                    {
+                        "ignored": false,
+                        "columnName": "firstname",
+                        "idColumnType": null,
+                        "propertyName": "firstname",
+                        "foreignKeyType": null,
+                        "columnObjectTypeId": "0-1",
+                        "associationIdentifierColumn": false
+                    },
+                    {
+                        "ignored": false,
+                        "columnName": "lastname",
+                        "idColumnType": null,
+                        "propertyName": "lastname",
+                        "foreignKeyType": null,
+                        "columnObjectTypeId": "0-1",
+                        "associationIdentifierColumn": false
+                    },
+                    {
+                        "ignored": false,
+                        "columnName": "from_apollo",
+                        "idColumnType": null,
+                        "propertyName": "from_apollo",
                         "foreignKeyType": null,
                         "columnObjectTypeId": "0-1",
                         "associationIdentifierColumn": false
