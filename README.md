@@ -19,6 +19,8 @@ https://developers.hubspot.com/docs/api/crm/imports
 
 # Running the program
 
+Ensure you run `npm install` first and have node installed via `brew install node`.
+
 ```bash
     # TechName => Technology Name
     # Company-Limit => hard limit for builtwith
@@ -29,10 +31,11 @@ https://developers.hubspot.com/docs/api/crm/imports
     node main.js Piano 1000 1
 ```
 
-**PS:** If you want to test apollo enrichment for small number of companies, you can comment out the below line
+**PS:** If you want to test apollo enrichment for all companies where apollo has contacts, you can comment out the below line
 
 ```javascript
     const apolloReqList = t.filter(f => f.website != null)
     //if you want to test apollo for small number of companies
         .splice(0, 5) //<-- this line enables testing for apollo
 ```
+Note, some imports may fail with 429 errors, due to rate limits from either Hubspot's API, Builtwith or Apollo.
