@@ -39,3 +39,5 @@ Ensure you run `npm install` first and have node installed via `brew install nod
         .splice(0, 5) //<-- this line enables testing for apollo
 ```
 Note, some imports may fail with 429 errors, due to rate limits from either Hubspot's API, Builtwith or Apollo.
+
+TODO: Contacts are imported even if there are no emails for them into Hubspot, this is being fixed
