@@ -21,15 +21,16 @@ https://developers.hubspot.com/docs/api/crm/imports
 
 Ensure you run `npm install` first and have node installed via `brew install node`.
 
+Then, in your CLI, you can run the following commandL
 ```bash
-    # TechName => Technology Name
-    # Company-Limit => hard limit for builtwith
-    # Apollo-Enrichment-Flag = 1 => Enrich with apollo
-    # Apollo-Enrichment-Flag = 0 => Do not enrich with apollo
+    # TechName => Technology Name, i.e. from builtwith, getting companies who use this technology in their stack
+    # Company-Limit => hard limit for number of builtwith companies to add from a given list
+    # Apollo-Enrichment-Flag = 1 => Enrich with apollo and get all the right emails of people who work in those companies
+    # Apollo-Enrichment-Flag = 0 => Do not enrich with apollo, and thus don't spend any API calls
     node main.js <TechName> <Company-Limit> <Apollo-Enrichment-Flag>
-
-    node main.js Piano 1000 1
 ```
+
+For example, `node main.js Piano 1000 1`.
 
 **PS:** If you want to test apollo enrichment for all companies where apollo has contacts, you can comment out the below line
 
